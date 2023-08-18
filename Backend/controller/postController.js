@@ -25,8 +25,9 @@ const createPost = asyncHandler( async (req, res)=>{
 
 const getPosts = asyncHandler( async  (req, res)=>{
     const blog = await Blog.find()
+    const blog1 = blog.reverse()
     
-    res.status(200).json(blog)
+    res.status(200).json(blog1)
     
 })
 
